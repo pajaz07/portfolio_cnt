@@ -1,0 +1,440 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1f2b; /* Dark blueish-gray background */
+    color: #e0e0e0;
+}
+
+header {
+    background: rgba(74, 144, 226, 0.8); /* Semi-transparent blue */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 10px 0 0;
+}
+
+/* Generic Section Styling */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin: 40px auto; /* Space between sections */
+    width: 90%; /* Slightly smaller than the window */
+    height: 90vh; /* Each section takes 90% of the viewport height */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Translucent background */
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #4aa8e2;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+section ul li {
+    margin: 10px 0;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* About Me Section Specific Styling */
+#about {
+    flex-direction: row; /* Arrange content and image side by side */
+    justify-content: space-between;
+    padding: 40px; /* Extra padding for About Me */
+}
+
+#about .content {
+    flex: 2; /* Take up 2/3 of the container width */
+    padding-right: 20px; /* Add spacing between text and image */
+    padding-left: 20px; /* Add left padding for alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    text-align: left; /* Align all text to the left */
+}
+
+#about .content h2 {
+    font-size: 8em; /* Large heading */
+    margin-bottom: 20px;
+}
+
+#about .content p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    line-height: 1.8;
+    text-align: left; /* Ensure paragraph text is left-aligned */
+}
+
+#about .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#about .image-container img {
+    height: 100%; /* Keep the image proportionate */
+    width: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Add spacing around the Education section */
+#education {
+    padding: 40px; /* Increased padding */
+    margin: 60px auto; /* Increased margin for more space above and below */
+    width: 90%;
+    background: rgba(255, 255, 255, 0.1); /* Translucent background */
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the left */
+}
+
+#education h2 {
+    font-size: 8rem; /* Match font size with "About Me" section */
+    margin-bottom: 30px; /* Increased space below the heading */
+    color: #4aa8e2;
+    text-align: right; /* Align to the right */
+    width: 100%; /* Full width for alignment */
+    padding-right: 20px; /* Add spacing from the right edge */
+}
+
+/* Institution Cards */
+.institutions {
+    display: flex;
+    justify-content: space-around; /* Spread cards evenly */
+    align-items: center; /* Align items to the center */
+    width: 100%;
+    gap: 30px; /* Add more space between the cards */
+    margin-top: 20px; /* Slight margin above the container */
+    align-items: stretch;
+
+}
+
+.institution {
+    width: 28%; /* Slightly reduce the width for more spacing */
+    background: rgba(255, 255, 255, 0.1); /* Card background */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.institution:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.logo-container {
+    width: 100%; /* Ensure consistent width */
+    height: 150px; /* Fixed height for all logos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px; /* Reduce space between logo and text */
+    overflow: hidden; /* Ensure no overflow from logos */
+}
+
+.logo-container img {
+    height: 100%; /* Make logos take full height */
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.institution p {
+    font-size: 1.5em; /* Larger font size for better visibility */
+    margin: 0;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+
+
+
+/* Skills Section Styling */
+#skills {
+    padding: 40px; /* Add consistent padding */
+    margin: 60px auto; /* Match margin of Education section */
+    width: 90%; /* Match width with other sections */
+    /* max-width: 1200px; Ensure it aligns properly with other sections */
+    background: rgba(255, 255, 255, 0.1); /* Translucent background */
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    text-align: left; /* Align text to the left */
+
+    
+}
+
+/* Skills Heading */
+#skills h2 {
+    font-size: 8rem; /* Match font size of Education heading */
+    margin-bottom: 30px; /* Space below heading */
+    margin-top: 0; /* Remove extra top margin */
+    color: #4aa8e2;
+    text-align: left; /* Align heading to the left */
+    width: 100%; /* Full width for alignment */
+    padding-left: 20px; /* Space from the left */
+}
+
+/* Skills Container Grid */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three skill cards per row */
+    gap: 20px; /* Space between cards */
+    width: 100%; /* Full width for the container */
+    margin-bottom: 20px; /* Space above the grid */
+}
+
+/* Skill Category Cards */
+.skill-category {
+    background: rgba(255, 255, 255, 0.1); /* Card background */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding: 15px; /* Slightly reduced padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Align text inside cards to center */
+    height: auto; /* Adjust height dynamically based on content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.2em; /* Slightly smaller font size */
+}
+
+.skill-category:hover {
+    transform: translateY(-10px); /* Add hover effect */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Heading and Text */
+.skill-category h3 {
+    font-size: 1.8em; /* Slightly reduced card heading font size */
+    color: #4aa8e2;
+    margin-bottom: 10px; /* Reduce space below heading */
+}
+
+.skill-category p {
+    font-size: 1em; /* Smaller font size for text */
+    line-height: 1.5; /* Adjust line height for readability */
+    color: #e0e0e0;
+}
+
+
+
+/* Projects Section */
+#projects {
+    padding: 40px; /* Consistent padding */
+    margin: 60px auto; /* Similar margin as Education section */
+    width: 90%; /* Full width consistent with Education section */
+    background: rgba(255, 255, 255, 0.1); /* Translucent background */
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the left */
+}
+
+/* Projects Heading */
+#projects h2 {
+    font-size: 8rem; /* Same font size as Education section heading */
+    margin-bottom: 30px; /* Space below the heading */
+    color: #4aa8e2;
+    text-align: right; /* Align to the left */
+    width: 100%; /* Full width */
+    padding-left: 20px; /* Add spacing from the left edge */
+}
+
+/* Project Cards */
+.projects-container {
+    display: flex;
+    justify-content: space-around; /* Spread cards evenly */
+    align-items: center; /* Align items to the center */
+    width: 100%;
+    gap: 30px; /* Space between the cards */
+    margin-top: 20px; /* Space above the container */
+    flex-wrap: wrap; /* Wrap cards to the next row if necessary */
+}
+
+.project {
+    width: 28%; /* Consistent width with Education cards */
+    background: rgba(255, 255, 255, 0.1); /* Card background */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo Container */
+.project-logo-container {
+    width: 100%; /* Consistent width */
+    height: 150px; /* Fixed height for logos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px; /* Space between logo and text */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.project-logo-container img {
+    height: 100%; /* Full height for logos */
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Project Name */
+.project p {
+    font-size: 1.5em; /* Larger font size for readability */
+    margin: 0;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+
+/* Achievements Section */
+/* Achievements Heading */
+#achievements h2 {
+     /* Shift heading closer to the left edge */
+
+    font-size: 8rem; /* Match font size of Education heading */
+    margin-bottom: 30px; /* Space below heading */
+    margin-top: 0;
+    margin-left: 30px; /* Remove extra top margin */
+    color: #4aa8e2;
+    text-align: left; /* Align heading to the left */
+    width: 100%; /* Full width for alignment */
+    padding-left: 20px; /* Space from the left */
+}
+
+/* Achievements Heading */
+#achievements h2 {
+    font-size: 8rem;
+    color: #4aa8e2;
+    text-align: left; /* Align heading to the left */
+    margin-bottom: 10px; /* Reduce space below the heading */
+}
+
+/* Achievements Content Layout */
+.achievements-container {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr; /* Three columns: left, vertical line, right */
+    gap: 20px; /* Add spacing between left and right columns */
+    align-items: start;
+    position: relative;
+    padding-top: 10px; /* Adjust top padding */
+}
+
+/* Left and Right Columns */
+.achievements-left,
+.achievements-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add uniform spacing between achievements */
+}
+
+/* Style for the achievement headings */
+.achievements-left h3,
+.achievements-right h3 {
+    font-size: 2rem; /* Slightly larger font size for visibility */
+    color: #4aa8e2; /* Match the line color */
+    margin-bottom: 5px; /* Adjust spacing below heading */
+    font-weight: bold; /* Make headings bold */
+}
+
+/* Vertical Line in the Center */
+.vertical-line {
+    background-color: #4aa8e2; /* Visible line */
+    width: 2px;
+    height: calc(100% - 20px); /* Adjust height to fit container */
+    margin: 10px auto; /* Center the line */
+}
+
+/* Achievement descriptions */
+.achievements-left p,
+.achievements-right p {
+    text-align: left; /* Align descriptions to the left */
+    font-size: 1.2rem; /* Consistent font size for readability */
+    margin: 0; /* Remove unnecessary margins */
+}
+
+
+
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(74, 144, 226, 0.8); /* Same semi-transparent color as header */
+    color: #fff;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+a {
+    color: #4aa8e2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #e0e0e0; /* Changes color on hover */
+}
